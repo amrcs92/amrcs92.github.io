@@ -1,0 +1,250 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "other": "العربية",
+  "otherCode": "ar",
+  "nav": {
+    "work": "Work",
+    "ai": "AI workflow",
+    "exp": "Experience",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "ui": {
+    "toDark": "Switch to dark theme",
+    "toLight": "Switch to light theme",
+    "langAria": "Read this site in Arabic",
+    "menu": "Menu",
+    "built": "Built with",
+    "how": "How I built it",
+    "apk": "Download APK",
+    "view": "View project",
+    "present": "Present",
+    "email": "Email",
+    "top": "Back to top",
+    "screens": "Screens",
+    "status": "Status",
+    "role": "Role",
+    "based": "Based in",
+    "exp": "Experience",
+    "stack": "Stack",
+    "langs": "Languages"
+  },
+  "hero": {
+    "first": "Amr Ashraf",
+    "last": "Serag Eldin",
+    "name": "Amr Ashraf Serag Eldin",
+    "short": "Amr Serag",
+    "mono": "AS",
+    "title": "Senior Full Stack Developer",
+    "location": "Egypt",
+    "years": "5+ years",
+    "line": "I build scalable web apps and APIs with Laravel and Next.js — and I direct AI to ship beyond my own stack.",
+    "cv": "Download CV",
+    "github": "GitHub",
+    "contact": "Contact",
+    "stack": "Laravel · Next.js · React · Vue.js",
+    "langs": "English · Arabic"
+  },
+  "work": {
+    "kicker": "Featured work",
+    "title": "Two Android apps, shipped end to end.",
+    "intro": "I designed, directed and shipped both. I’m a web developer, so I built them through an AI-directed workflow — not hand-coded React Native — and I say so up front."
+  },
+  "projects": [
+    {
+      "id": "dawa2",
+      "name": "Dawa2",
+      "alt": "دواء",
+      "color": "#0F766E",
+      "tagline": "Your medicines, on time.",
+      "desc": "A private, offline medication reminder for Android. Real full-screen alarms keep ringing until you answer Taken, Snooze or Skip. English and Arabic. No accounts, no cloud.",
+      "status": "Android · APK available",
+      "how": "AI-directed: I wrote the spec, chose the UI from mockups, steered Claude Code through the plan, and tested every alarm on my own phone.",
+      "shots": [
+        "Today screen",
+        "Full-screen alarm"
+      ],
+      "tags": [
+        "Expo",
+        "React Native",
+        "Kotlin",
+        "SQLite"
+      ]
+    },
+    {
+      "id": "fakkerni",
+      "name": "Fakkerni",
+      "alt": "فكّرني",
+      "color": "#1E1B4B",
+      "tagline": "Everything that matters, on time.",
+      "desc": "An Arabic-first alarm and reminder app. Reminders that ring offline, medication with dose tracking and refills, and encrypted backups to Google Drive. Right-to-left throughout.",
+      "status": "Being prepared for Google Play",
+      "how": "Same workflow: spec, mockups, Claude Code, real-device testing. I chose every feature and decided what shipped.",
+      "shots": [
+        "Reminders home",
+        "Medication and doses"
+      ],
+      "tags": [
+        "Expo",
+        "React Native",
+        "Kotlin",
+        "SQLite"
+      ]
+    }
+  ],
+  "ai": {
+    "kicker": "Process",
+    "title": "How I work with AI",
+    "lead": "A deliberate workflow, not autocomplete. I own the product decisions; AI implements what I direct, and I review and test it.",
+    "steps": [
+      {
+        "t": "Brainstorm & spec",
+        "d": "Shape the idea and write the spec with ChatGPT.",
+        "tool": "ChatGPT"
+      },
+      {
+        "t": "Pick the UI",
+        "d": "Compare Claude Design mockups and choose a direction.",
+        "tool": "Claude Design"
+      },
+      {
+        "t": "Direct the build",
+        "d": "Steer Claude Code through the implementation plan, milestone by milestone.",
+        "tool": "Claude Code"
+      },
+      {
+        "t": "Test for real",
+        "d": "Run it on the emulator and on my own phone.",
+        "tool": "Emulator + phone"
+      },
+      {
+        "t": "Decide what ships",
+        "d": "Choose the features, cut the rest, own the release.",
+        "tool": "Me"
+      }
+    ],
+    "noteTitle": "Straight answer",
+    "note": "Dawa2 and Fakkerni were built this way. I didn’t hand-write their React Native or Kotlin — my hands-on stack is Laravel and Next.js."
+  },
+  "exp": {
+    "kicker": "Career",
+    "title": "Experience",
+    "items": [
+      {
+        "org": "Monglish International Academy & Edulixa360",
+        "role": "Senior Full Stack Developer",
+        "from": "Jun 2024",
+        "to": "Present",
+        "y": "2024",
+        "points": [
+          "Commerce API with Laravel, Redis, Stripe, Swagger and Sentry.",
+          "Multi-platform admin dashboard with role-based access and OpenAI integration.",
+          "Real-time internal system on Laravel Reverb WebSockets and Next.js.",
+          "Marketing Calendar synced with Microsoft Graph / Office 365.",
+          "Monglish and Edulixa360 websites with Next.js, Strapi, next-intl and shadcn/ui.",
+          "Led the team: code reviews, and CI/CD with GitHub Actions."
+        ]
+      },
+      {
+        "org": "US Legalization",
+        "role": "Full Stack Developer",
+        "from": "Jul 2019",
+        "to": "Jul 2024",
+        "y": "2019",
+        "points": [
+          "Laravel and WordPress apps with FirstData and Stripe payments and FedEx shipping APIs."
+        ]
+      },
+      {
+        "org": "IT Wolf Solutions",
+        "role": "Junior Software Developer",
+        "from": "2017",
+        "to": "2018",
+        "y": "2017",
+        "points": [
+          "Saydality pharmacy app and Taxi Masr, built with Ionic."
+        ]
+      },
+      {
+        "org": "KAUMEYA Language School",
+        "role": "Web Developer / Data Analyst",
+        "from": "2015",
+        "to": "2016",
+        "y": "2015",
+        "points": []
+      }
+    ]
+  },
+  "skills": {
+    "kicker": "Toolkit",
+    "title": "Skills",
+    "groups": [
+      "Backend",
+      "Frontend",
+      "DevOps",
+      "AI tools"
+    ],
+    "items": [
+      [
+        "PHP",
+        "Laravel",
+        "Sanctum",
+        "Reverb",
+        "Redis",
+        "MySQL",
+        "Swagger",
+        "Stripe",
+        "Microsoft Graph"
+      ],
+      [
+        "React",
+        "Next.js",
+        "Vue.js",
+        "TypeScript",
+        "Tailwind",
+        "shadcn/ui",
+        "Zustand",
+        "Zod"
+      ],
+      [
+        "GitHub Actions",
+        "Git",
+        "Linux",
+        "Docker"
+      ],
+      [
+        "Claude Code",
+        "Claude AI",
+        "ChatGPT",
+        "MCP"
+      ]
+    ]
+  },
+  "edu": {
+    "kicker": "Education",
+    "title": "Education",
+    "items": [
+      {
+        "degree": "BSc Computer Science",
+        "school": "Arab Academy for Science, Technology & Maritime Transport",
+        "year": "2014"
+      },
+      {
+        "degree": "Full Stack Internship",
+        "school": "ITI — Information Technology Institute",
+        "year": "2017"
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "Contact",
+    "title": "Let’s build something that scales.",
+    "line": "Hiring for Laravel, Next.js or full stack product work? Email is fastest.",
+    "cta": "Email me"
+  },
+  "footer": {
+    "rights": "© 2026 Amr Ashraf Serag Eldin",
+    "built": "Next.js · static export · GitHub Pages"
+  }
+}
