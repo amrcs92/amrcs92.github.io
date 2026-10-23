@@ -32,8 +32,8 @@
   },
   "hero": {
     "first": "Amr Ashraf",
-    "last": "Serag Eldin",
-    "name": "Amr Ashraf Serag Eldin",
+    "last": "Serag Eldin Ismail",
+    "name": "Amr Ashraf Serag Eldin Ismail",
     "short": "Amr Serag",
     "mono": "AS",
     "title": "Senior Full Stack Developer",
@@ -375,7 +375,7 @@
     "cta": "Email me"
   },
   "footer": {
-    "rights": "© 2026 Amr Ashraf Serag Eldin",
+    "rights": "© 2026 Amr Ashraf Serag Eldin Ismail",
     "built": "Next.js · static export · GitHub Pages"
   }
 }
