@@ -38,6 +38,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
   return (
     <div className="cn">
+      <NanoField />
       <a className="skip" href="#main">{ar ? "تخطَّ إلى المحتوى" : "Skip to content"}</a>
       <header className="cn-h">
         <div className="wrap">
@@ -58,7 +59,6 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       <main id="main">
         <div className="wrap">
           <section className="cn-hero">
-            <NanoField />
             <div>
               <p className="cn-prompt" dir="ltr"><span>amr@egypt</span>:<span className="acc">~$ whoami</span></p>
               <h1 className="cn-name">{h.name}</h1>

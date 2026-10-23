@@ -98,10 +98,9 @@ html[dir="rtl"] .ic.flip { transform: scaleX(-1); }
 .cn .tg .k { color: var(--cn-muted); }
 
 .cn-hero { padding-block: var(--space-12) var(--space-16); display: grid; gap: var(--space-8); position: relative; }
-/* Nano particle layer: full-bleed behind the hero, never takes pointer events */
-.cn-hero > :not(.cn-nano) { position: relative; z-index: 1; }
-.cn-nano { position: absolute; top: 0; bottom: 0; left: calc(50% - 50vw); width: 100vw; height: 100%; z-index: 0; pointer-events: none; user-select: none;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 82%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0, #000 14%, #000 82%, transparent 100%); }
+/* Nano particle layer: fixed behind the whole page, edge to edge, never takes pointer events */
+.cn > main, .cn > .cn-contact { position: relative; z-index: 1; }
+.cn-nano { position: fixed; inset: 0; width: 100vw; height: 100lvh; z-index: 0; pointer-events: none; user-select: none; }
 .cn-prompt { font-family: var(--font-cn-mono); font-size: 14px; color: var(--cn-muted); margin: 0 0 14px; }
 .cn-prompt .acc::after { content: "▍"; margin-inline-start: 6px; color: var(--cn-accent); }
 .cn-name { font-size: 44px; line-height: 1.02; letter-spacing: -.03em; font-weight: 600; margin: 0 0 14px; }
