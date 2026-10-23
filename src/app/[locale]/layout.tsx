@@ -37,7 +37,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       locale: locale === "ar" ? "ar_EG" : "en_US",
       url: `${basePath}/${locale}/`,
     },
-    icons: { icon: `${basePath}/favicon.ico` },
+    icons: {
+      icon: [
+        { url: `${basePath}/icon.svg`, type: "image/svg+xml" },
+        { url: `${basePath}/favicon.ico`, sizes: "48x48" },
+      ],
+      apple: `${basePath}/apple-icon.png`,
+    },
   };
 }
 

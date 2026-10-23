@@ -12,7 +12,7 @@ import { useEffect, useRef } from "react";
    drift / speed            idle wander amplitude (px) / idle wander speed
    Colours come from the theme tokens: --cn-muted (particles, lines), --cn-accent (near cursor). */
 export const NANO = {
-  density: 5200, mobileDensity: 7000, max: 280, mobileMax: 90, link: 90,
+  density: 2400, mobileDensity: 4200, max: 560, mobileMax: 150, link: 72,
   radius: 200, force: 1.7, mode: "repel" as "repel" | "attract",
   spring: 0.035, damping: 0.86, drift: 4, speed: 1,
 };
@@ -46,14 +46,26 @@ export function NanoField() {
       if (L > 0) {
         const paths: Particle[][] = [[], [], [], []];
         const hot: [Particle, Particle, number][] = [];
-        for (let i = 0; i < P.length; i++) {
-          const p = P[i];
-          for (let j = i + 1; j < P.length; j++) {
-            const q = P[j], dx = p.x - q.x, dy = p.y - q.y, d2 = dx * dx + dy * dy;
-            if (d2 > L2) continue;
-            const a = 1 - Math.sqrt(d2) / L;
-            if (p.h + q.h > 0.5) hot.push([p, q, a]);
-            else paths[Math.min(3, (a * 4) | 0)].push(p, q);
+        // Bucket into L-sized cells so each particle only checks its neighbours, not all of P.
+        const cols = Math.ceil(W / L) + 1, grid = new Map<number, Particle[]>();
+        for (const p of P) {
+          const k = Math.floor(p.y / L) * cols + Math.floor(p.x / L);
+          const c = grid.get(k);
+          if (c) c.push(p); else grid.set(k, [p]);
+        }
+        const link = (p: Particle, q: Particle) => {
+          const dx = p.x - q.x, dy = p.y - q.y, d2 = dx * dx + dy * dy;
+          if (d2 > L2) return;
+          const a = 1 - Math.sqrt(d2) / L;
+          if (p.h + q.h > 0.5) hot.push([p, q, a]);
+          else paths[Math.min(3, (a * 4) | 0)].push(p, q);
+        };
+        for (const [k, cell] of grid) {
+          for (let i = 0; i < cell.length; i++) for (let j = i + 1; j < cell.length; j++) link(cell[i], cell[j]);
+          // Forward neighbours only (E, SW, S, SE), so each pair of cells is visited once.
+          for (const o of [1, cols - 1, cols, cols + 1]) {
+            const nb = grid.get(k + o);
+            if (nb) for (const p of cell) for (const q of nb) link(p, q);
           }
         }
         ctx!.lineWidth = 0.8;
