@@ -6,6 +6,7 @@ import type { Content } from "@/content/types";
 import { NanoField } from "@/components/NanoField";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { WorkGallery } from "@/components/WorkGallery";
+import { HeroType } from "@/components/HeroType";
 import { ArrowIcon, CodeIcon, DownloadIcon, ExternalIcon, MailIcon, PersonIcon } from "@/components/icons";
 import { asset, links, projectLinks, shotNames, shotSize, type ProjectId } from "@/site.config";
 
@@ -62,9 +63,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
           <section className="cn-hero">
             <div>
               <p className="cn-prompt" dir="ltr"><span>amr@egypt</span>:<span className="acc">~$ whoami</span></p>
-              <h1 className="cn-name">{h.name}</h1>
-              <p className="cn-title">{h.title}</p>
-              <p className="cn-line">{h.line}</p>
+              <HeroType name={h.name} title={h.title} line={h.line} />
               <div className="cn-ctas">
                 <a className="cn-btn pri" href={links.cv} download><DownloadIcon />{h.cv}</a>
                 <a className="cn-btn" href={links.github} target="_blank" rel="noopener noreferrer"><CodeIcon />{h.github}<ExternalIcon /></a>
