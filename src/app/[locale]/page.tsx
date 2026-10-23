@@ -5,6 +5,7 @@ import { routing } from "@/i18n/routing";
 import type { Content } from "@/content/types";
 import { NanoField } from "@/components/NanoField";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { WorkGallery } from "@/components/WorkGallery";
 import { ArrowIcon, CodeIcon, DownloadIcon, ExternalIcon, MailIcon, PersonIcon } from "@/components/icons";
 import { asset, links, projectLinks, shotNames, shotSize, type ProjectId } from "@/site.config";
 
@@ -152,6 +153,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                   {j.points.length > 0 && (
                     <ul className="cn-diff">{j.points.map((p) => <li key={p}>{p}</li>)}</ul>
                   )}
+                  {j.gallery && <WorkGallery g={j.gallery} dir="one360" />}
                 </li>
               ))}
             </ol>

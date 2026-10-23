@@ -144,7 +144,116 @@
           "تقويم تسويقي متزامن مع Microsoft Graph / Office 365.",
           "موقعا Monglish وEdulixa360 باستخدام Next.js وStrapi وnext-intl وshadcn/ui.",
           "قيادة الفريق: مراجعة الكود، وCI/CD عبر GitHub Actions."
-        ]
+        ],
+        "gallery": {
+          "title": "لوحة تحكم One360",
+          "kicker": "الشاشات",
+          "desc": "لوحة الإدارة التي تشغّل Monglish وEdulixa360: باقات الدورات بأسعار لكل دولة ومراجعة للأسعار، وطلبات عبر Stripe وTabby وTamara، وأكواد الخصم، ونماذج العملاء المحتملين، وبكسلات التتبع، وإعدادات البريد، وصلاحيات حسب الدور مع سجل نشاط كامل. مبنية بـ Laravel 12 وBlade وTailwind CSS وAlpine.js.",
+          "note": "بيانات تجريبية: تم استبدال أسماء العملاء والبريد الإلكتروني وأرقام الهواتف ومعرّفات الدفع والمفاتيح.",
+          "open": "فتح لقطة الشاشة",
+          "close": "إغلاق",
+          "prev": "السابق",
+          "next": "التالي",
+          "of": "من",
+          "items": [
+            {
+              "id": "00-login",
+              "t": "تسجيل الدخول"
+            },
+            {
+              "id": "01-dashboard",
+              "t": "نظرة عامة على لوحة التحكم"
+            },
+            {
+              "id": "02-export-csv",
+              "t": "تصدير CSV"
+            },
+            {
+              "id": "03-sales-phones",
+              "t": "أرقام هواتف المبيعات"
+            },
+            {
+              "id": "04-forms-center",
+              "t": "مركز النماذج"
+            },
+            {
+              "id": "05-packages-pricing",
+              "t": "الباقات والأسعار"
+            },
+            {
+              "id": "06-stages",
+              "t": "المراحل"
+            },
+            {
+              "id": "07-pricing-units",
+              "t": "وحدات التسعير"
+            },
+            {
+              "id": "08-pricing-unit-switch",
+              "t": "تبديل وحدة التسعير"
+            },
+            {
+              "id": "09-periods",
+              "t": "الفترات"
+            },
+            {
+              "id": "10-content-types",
+              "t": "أنواع المحتوى"
+            },
+            {
+              "id": "11-currencies-countries",
+              "t": "العملات والدول"
+            },
+            {
+              "id": "12-pricing-mode",
+              "t": "وضع التسعير"
+            },
+            {
+              "id": "13-pricing-audit",
+              "t": "مراجعة الأسعار"
+            },
+            {
+              "id": "14-payment-gateways",
+              "t": "بوابات الدفع: Stripe وTabby وTamara"
+            },
+            {
+              "id": "15-tracking-pixels",
+              "t": "بكسلات التتبع: Meta وTikTok وSnapchat"
+            },
+            {
+              "id": "16-smtp-settings",
+              "t": "إعدادات SMTP"
+            },
+            {
+              "id": "17-coupon-codes",
+              "t": "أكواد الخصم"
+            },
+            {
+              "id": "18-orders",
+              "t": "الطلبات"
+            },
+            {
+              "id": "19-users",
+              "t": "المستخدمون"
+            },
+            {
+              "id": "20-roles",
+              "t": "الأدوار"
+            },
+            {
+              "id": "21-permissions",
+              "t": "الصلاحيات"
+            },
+            {
+              "id": "22-all-activities",
+              "t": "سجل النشاط"
+            },
+            {
+              "id": "23-user-activities",
+              "t": "النشاط حسب المستخدم"
+            }
+          ]
+        }
       },
       {
         "org": "US Legalization",

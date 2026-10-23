@@ -144,7 +144,116 @@
           "Marketing Calendar synced with Microsoft Graph / Office 365.",
           "Monglish and Edulixa360 websites with Next.js, Strapi, next-intl and shadcn/ui.",
           "Led the team: code reviews, and CI/CD with GitHub Actions."
-        ]
+        ],
+        "gallery": {
+          "title": "One360 admin dashboard",
+          "kicker": "Screens",
+          "desc": "The admin behind Monglish and Edulixa360: course packages with per-country pricing and a pricing audit, orders across Stripe, Tabby and Tamara, coupon codes, lead forms, tracking pixels, mail settings, and role-based access with a full activity log. Laravel 12, Blade, Tailwind CSS and Alpine.js.",
+          "note": "Sample data: customer names, emails, phone numbers, payment IDs and keys are replaced.",
+          "open": "Open screenshot",
+          "close": "Close",
+          "prev": "Previous",
+          "next": "Next",
+          "of": "of",
+          "items": [
+            {
+              "id": "00-login",
+              "t": "Sign in"
+            },
+            {
+              "id": "01-dashboard",
+              "t": "Dashboard overview"
+            },
+            {
+              "id": "02-export-csv",
+              "t": "CSV export"
+            },
+            {
+              "id": "03-sales-phones",
+              "t": "Sales phone numbers"
+            },
+            {
+              "id": "04-forms-center",
+              "t": "Forms center"
+            },
+            {
+              "id": "05-packages-pricing",
+              "t": "Packages and pricing"
+            },
+            {
+              "id": "06-stages",
+              "t": "Stages"
+            },
+            {
+              "id": "07-pricing-units",
+              "t": "Pricing units"
+            },
+            {
+              "id": "08-pricing-unit-switch",
+              "t": "Pricing unit switch"
+            },
+            {
+              "id": "09-periods",
+              "t": "Periods"
+            },
+            {
+              "id": "10-content-types",
+              "t": "Content types"
+            },
+            {
+              "id": "11-currencies-countries",
+              "t": "Currencies and countries"
+            },
+            {
+              "id": "12-pricing-mode",
+              "t": "Pricing mode"
+            },
+            {
+              "id": "13-pricing-audit",
+              "t": "Pricing audit"
+            },
+            {
+              "id": "14-payment-gateways",
+              "t": "Payment gateways: Stripe, Tabby, Tamara"
+            },
+            {
+              "id": "15-tracking-pixels",
+              "t": "Tracking pixels: Meta, TikTok, Snapchat"
+            },
+            {
+              "id": "16-smtp-settings",
+              "t": "SMTP settings"
+            },
+            {
+              "id": "17-coupon-codes",
+              "t": "Coupon codes"
+            },
+            {
+              "id": "18-orders",
+              "t": "Orders"
+            },
+            {
+              "id": "19-users",
+              "t": "Users"
+            },
+            {
+              "id": "20-roles",
+              "t": "Roles"
+            },
+            {
+              "id": "21-permissions",
+              "t": "Permissions"
+            },
+            {
+              "id": "22-all-activities",
+              "t": "Activity log"
+            },
+            {
+              "id": "23-user-activities",
+              "t": "Activity by user"
+            }
+          ]
+        }
       },
       {
         "org": "US Legalization",
