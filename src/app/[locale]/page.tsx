@@ -118,9 +118,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                       </ul>
                       <p className="cn-comment">{"// "}<b>{c.ui.how}:</b> {p.how}</p>
                       <div className="cn-ctas">
-                        <a className="cn-btn pri" href={pl.apk}><DownloadIcon />{c.ui.apk}</a>
+                        <a className="cn-btn pri" href={pl.apk}><DownloadIcon />{pl.kind === "exe" ? c.ui.exe : c.ui.apk}</a>
                         {pl.view && (
-                          <a className="cn-btn" href={pl.view[locale as "en" | "ar"]} target="_blank" rel="noopener noreferrer">{c.ui.view}<ArrowIcon /></a>
+                          <a className="cn-btn" href={pl.view[locale as "en" | "ar"]} target="_blank" rel="noopener noreferrer">{pl.code ? c.ui.code : c.ui.view}{pl.code ? <ExternalIcon /> : <ArrowIcon />}</a>
                         )}
                       </div>
                     </div>

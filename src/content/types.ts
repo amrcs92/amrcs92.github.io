@@ -10,7 +10,7 @@ export type Content = {
   other: string;
   otherCode: "en" | "ar";
   nav: { work: string; ai: string; exp: string; skills: string; contact: string };
-  ui: Record<"toDark" | "toLight" | "langAria" | "menu" | "built" | "how" | "apk" | "view" | "present" | "email" | "top" | "screens" | "status" | "role" | "based" | "exp" | "stack" | "langs", string>;
+  ui: Record<"toDark" | "toLight" | "langAria" | "menu" | "built" | "how" | "apk" | "exe" | "code" | "view" | "present" | "email" | "top" | "screens" | "status" | "role" | "based" | "exp" | "stack" | "langs", string>;
   hero: Record<"first" | "last" | "name" | "short" | "mono" | "title" | "location" | "years" | "line" | "cv" | "github" | "contact" | "stack" | "langs" | "status", string>;
   work: { kicker: string; title: string; intro: string; crew: { cmd: string; rows: [string, string][] } };
   projects: { id: ProjectId; name: string; alt: string; color: string; tagline: string; desc: string; status: string; how: string; shots: [string, string]; tags: string[] }[];

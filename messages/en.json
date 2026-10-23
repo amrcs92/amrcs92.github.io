@@ -28,7 +28,9 @@
     "based": "Based in",
     "exp": "Experience",
     "stack": "Stack",
-    "langs": "Languages"
+    "langs": "Languages",
+    "exe": "Download for Windows",
+    "code": "View code"
   },
   "hero": {
     "first": "Amr Ashraf",
@@ -49,8 +51,8 @@
   },
   "work": {
     "kicker": "Featured work",
-    "title": "Two Android apps, shipped end to end.",
-    "intro": "I designed, directed and shipped both. I’m a web developer, so I built them through an AI-directed workflow — not hand-coded React Native — and I say so up front.",
+    "title": "Two Android apps and a Windows tool, shipped end to end.",
+    "intro": "I designed, directed and shipped all three. I’m a web developer, so I built them through an AI-directed workflow — not hand-coded React Native or Python — and I say so up front.",
     "crew": {
       "cmd": "git shortlog --team",
       "rows": [
@@ -112,6 +114,27 @@
         "React Native",
         "Kotlin",
         "SQLite"
+      ]
+    },
+    {
+      "id": "claude-usage-tray",
+      "name": "Claude Usage Tray",
+      "alt": "Windows",
+      "color": "#334155",
+      "tagline": "Your Claude plan limits, one glance away.",
+      "desc": "A Windows tray app that shows your Claude 5-hour session and weekly limits without opening a browser: a live % icon, a popup dashboard with a pacing hint, and toasts at 80% and 95%. It reuses Claude Code's saved login, so there's nothing to set up. Unofficial: not affiliated with Anthropic.",
+      "status": "Windows · .exe available",
+      "how": "Built for Claude, with Claude: I spotted the need while using Claude Code every day, then directed Claude Code through the build, the tests and the packaging.",
+      "shots": [
+        "Dashboard",
+        "Dashboard at high usage"
+      ],
+      "tags": [
+        "Python",
+        "PyInstaller",
+        "WebView2",
+        "pytest",
+        "Windows"
       ]
     }
   ],
