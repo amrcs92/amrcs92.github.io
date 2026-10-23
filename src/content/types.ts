@@ -12,7 +12,7 @@ export type Content = {
   nav: { work: string; ai: string; exp: string; skills: string; contact: string };
   ui: Record<"toDark" | "toLight" | "langAria" | "menu" | "built" | "how" | "apk" | "view" | "present" | "email" | "top" | "screens" | "status" | "role" | "based" | "exp" | "stack" | "langs", string>;
   hero: Record<"first" | "last" | "name" | "short" | "mono" | "title" | "location" | "years" | "line" | "cv" | "github" | "contact" | "stack" | "langs", string>;
-  work: { kicker: string; title: string; intro: string };
+  work: { kicker: string; title: string; intro: string; crew: { cmd: string; rows: [string, string][] } };
   projects: { id: ProjectId; name: string; alt: string; color: string; tagline: string; desc: string; status: string; how: string; shots: [string, string]; tags: string[] }[];
   ai: { kicker: string; title: string; lead: string; steps: { t: string; d: string; tool: string }[]; noteTitle: string; note: string };
   exp: { kicker: string; title: string; items: { org: string; role: string; from: string; to: string; y: string; points: string[]; gallery?: Gallery }[] };

@@ -237,3 +237,12 @@ html[lang="ar"] .cn-name { letter-spacing: 0; line-height: 1.3; font-weight: 700
 .cn-lb .tg { font: 500 13px/1 var(--font-cn-mono); height: 34px; padding: 0 10px; border: 1px solid var(--cn-line); border-radius: var(--radius-sm); background: var(--cn-surface); color: var(--cn-ink); display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
 .cn-lb .tg:hover { border-color: var(--cn-accent); }
 .cn-rev { display: inline-flex; transform: scaleX(-1); }
+
+/* "Team credits" block under the work intro */
+.cn-crew { max-width: 760px; margin: -8px 0 var(--space-8); overflow: hidden; }
+.cn-crew-h { margin: 0; padding: 10px 16px; border-bottom: 1px solid var(--cn-line); font-size: 13px; color: var(--cn-muted); text-align: start; }
+.cn-crew dl { margin: 0; padding: 10px 16px 14px; display: grid; gap: 8px; }
+.cn-crew dl > div { display: grid; gap: 2px 18px; }
+@media (min-width: 640px) { .cn-crew dl > div { grid-template-columns: 130px 1fr; } }
+.cn-crew dt { color: var(--cn-accent); font-size: 13.5px; padding-top: 2px; }
+.cn-crew dd { margin: 0; font-size: 15px; }

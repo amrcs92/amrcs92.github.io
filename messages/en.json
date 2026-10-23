@@ -49,7 +49,28 @@
   "work": {
     "kicker": "Featured work",
     "title": "Two Android apps, shipped end to end.",
-    "intro": "I designed, directed and shipped both. I’m a web developer, so I built them through an AI-directed workflow — not hand-coded React Native — and I say so up front."
+    "intro": "I designed, directed and shipped both. I’m a web developer, so I built them through an AI-directed workflow — not hand-coded React Native — and I say so up front.",
+    "crew": {
+      "cmd": "git shortlog --team",
+      "rows": [
+        [
+          "ChatGPT",
+          "Brainstormed the ideas with me — and never once said one was bad."
+        ],
+        [
+          "Claude Design",
+          "Drew the mockups. I picked the winners."
+        ],
+        [
+          "Claude Code",
+          "Wrote the code, and politely asked “shall I continue?” a lot."
+        ],
+        [
+          "Me",
+          "Chief Prompt Officer™. Also product owner, tester, and the human whose phone rang at 3 a.m. so yours rings on time."
+        ]
+      ]
+    }
   },
   "projects": [
     {
@@ -146,7 +167,7 @@
           "Led the team: code reviews, and CI/CD with GitHub Actions."
         ],
         "gallery": {
-          "title": "One360 admin dashboard",
+          "title": "Monglish / Edulixa360 admin dashboard",
           "kicker": "Screens",
           "desc": "The admin behind Monglish and Edulixa360: course packages with per-country pricing and a pricing audit, orders across Stripe, Tabby and Tamara, coupon codes, lead forms, tracking pixels, mail settings, and role-based access with a full activity log. Laravel 12, Blade, Tailwind CSS and Alpine.js.",
           "note": "Sample data: customer names, emails, phone numbers, payment IDs and keys are replaced.",

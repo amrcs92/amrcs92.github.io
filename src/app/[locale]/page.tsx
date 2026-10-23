@@ -87,6 +87,14 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
           <section className="cn-sec" id="work">
             <SectionHead slug="work" sub={c.work.kicker} />
             <p className="cn-intro">{c.work.intro}</p>
+            <div className="panel cn-crew">
+              <p className="cn-crew-h mono" dir="ltr"><span className="acc">$</span> {c.work.crew.cmd}</p>
+              <dl>
+                {c.work.crew.rows.map(([who, what]) => (
+                  <div key={who}><dt className="mono">{who}</dt><dd>{what}</dd></div>
+                ))}
+              </dl>
+            </div>
             {c.projects.map((p) => {
               const pl = projectLinks[p.id];
               return (
@@ -153,7 +161,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                   {j.points.length > 0 && (
                     <ul className="cn-diff">{j.points.map((p) => <li key={p}>{p}</li>)}</ul>
                   )}
-                  {j.gallery && <WorkGallery g={j.gallery} dir="one360" />}
+                  {j.gallery && <WorkGallery g={j.gallery} dir="monglish-edulixa360" />}
                 </li>
               ))}
             </ol>
