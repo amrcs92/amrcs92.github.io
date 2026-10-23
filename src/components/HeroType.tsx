@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 /* ---- Typing: tune here -------------------------------------------------------
    type      ms per character for name / title / line
    erase     ms per character when deleting
-   hold      ms to keep the finished text before deleting and retyping
+   hold      ms to keep the finished text before deleting the role and line and retyping them
    gap       ms pause between lines and before retyping */
 const T = { type: [85, 45, 22], erase: 9, hold: 10000, gap: 380 };
 
@@ -19,7 +19,8 @@ function Typed({ full, n, caret }: { full: string; n: number; caret: boolean }) 
   );
 }
 
-/** Hero name, role and line typed like a terminal; loops every `hold` ms. Static for reduced motion and before hydration. */
+/** Hero typed like a terminal: the name once, then the role and line on a loop every `hold` ms.
+    Static for reduced motion and before hydration. */
 export function HeroType({ name, title, line }: { name: string; title: string; line: string }) {
   const parts = [name, title, line];
   const total = parts.reduce((a, p) => a + p.length, 0);
@@ -38,8 +39,9 @@ export function HeroType({ name, title, line }: { name: string; title: string; l
         const lineEnd = k === lens[0] || k === lens[0] + lens[1];
         t = window.setTimeout(tick, lineEnd ? T.gap : T.type[i]);
       } else {
-        if (k <= 0) { dir = 1; t = window.setTimeout(tick, T.gap); return; }
-        k = Math.max(0, k - 2); setN(k);
+        // The name stays: only the role and the line are erased.
+        if (k <= lens[0]) { dir = 1; t = window.setTimeout(tick, T.gap); return; }
+        k = Math.max(lens[0], k - 2); setN(k);
         t = window.setTimeout(tick, T.erase);
       }
     };
