@@ -7,7 +7,7 @@ import { basePath } from "./src/site.config";
 const intlRequestConfig = "./src/i18n/request.ts";
 
 const nextConfig: NextConfig = {
-  // Static HTML for GitHub Pages: one folder per locale under /portfolio.
+  // Static HTML for GitHub Pages: one folder per locale at the site root.
   output: "export",
   basePath,
   trailingSlash: true,

@@ -6,7 +6,7 @@
 
 5+ years building scalable web applications and APIs, and directing AI to ship beyond my own stack.
 
-[**View the portfolio →**](https://amrcs92.github.io/portfolio/) · [English](https://amrcs92.github.io/portfolio/en/) · [العربية](https://amrcs92.github.io/portfolio/ar/) · [Download CV](https://amrcs92.github.io/portfolio/cv/amr-ashraf-serag-eldin-cv.pdf)
+[**View the portfolio →**](https://amrcs92.github.io/) · [English](https://amrcs92.github.io/en/) · [العربية](https://amrcs92.github.io/ar/) · [Download CV](https://amrcs92.github.io/cv/amr-ashraf-serag-eldin-cv.pdf)
 
 [amrcs1992@gmail.com](mailto:amrcs1992@gmail.com) · [LinkedIn](https://www.linkedin.com/in/amrashrafserageldin92) · [GitHub](https://github.com/amrcs92)
 
@@ -75,7 +75,7 @@ A deliberate workflow, not autocomplete. I own the product decisions; AI impleme
 
 Highlights at Monglish & Edulixa360: a Commerce API (Laravel, Redis, Stripe, Swagger, Sentry) · a multi-platform admin dashboard with RBAC and OpenAI integration · a real-time internal system on Laravel Reverb + Next.js · a Marketing Calendar synced with Microsoft Graph / Office 365 · the Monglish and Edulixa360 websites (Next.js, Strapi, next-intl, shadcn/ui).
 
-The full history is in the [portfolio](https://amrcs92.github.io/portfolio/en/#exp) and the [CV](https://amrcs92.github.io/portfolio/cv/amr-ashraf-serag-eldin-cv.pdf).
+The full history is in the [portfolio](https://amrcs92.github.io/en/#exp) and the [CV](https://amrcs92.github.io/cv/amr-ashraf-serag-eldin-cv.pdf).
 
 ## Skills
 
@@ -118,6 +118,6 @@ Every push to `main` is checked (lint, typecheck, build) and deployed by `.githu
 
 New app version: attach the APK to a new release on `dawa2-site` or `fakkerni-site`, named exactly `dawa2.apk` or `fakkerni.apk`. The Download APK buttons always serve the latest.
 
-Local preview: `npm install`, then `npm run dev` and open `http://localhost:3000/portfolio/en/`.
+Local preview: `npm install`, then `npm run dev` and open `http://localhost:3000/en/`.
 
 </details>

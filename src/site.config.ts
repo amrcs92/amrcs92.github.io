@@ -1,5 +1,5 @@
-/** Deployed at https://amrcs92.github.io/portfolio — change basePath if the repo is renamed. */
-export const basePath = "/portfolio";
+/** Deployed at the root of https://amrcs92.github.io (repo amrcs92/amrcs92.github.io), so there is no base path. */
+export const basePath = "";
 export const siteUrl = "https://amrcs92.github.io";
 
 /** Prefix a file in /public with the base path (plain <img>/<a> don't add it on their own). */
