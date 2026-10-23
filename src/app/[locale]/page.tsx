@@ -79,7 +79,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 <dt>{c.ui.exp}</dt><dd>{h.years}</dd>
                 <dt>{c.ui.stack}</dt><dd dir="ltr" style={{ textAlign: "start" }}>{h.stack}</dd>
                 <dt>{c.ui.langs}</dt><dd>{h.langs}</dd>
-                <dt>{c.ui.status}</dt><dd><span className="cn-dot" />{c.projects[1].status}</dd>
+                <dt>{c.ui.status}</dt><dd><span className="cn-dot" />{h.status}</dd>
               </dl>
             </aside>
           </section>
