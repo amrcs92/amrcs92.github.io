@@ -13,7 +13,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="noindex" />
-        <title>Sitemap · amrcs92.github.io</title>
+        <title>Sitemap · amrashraf.dev</title>
         <style>
           :root { color-scheme: light dark; --bg: #fafafa; --fg: #18181b; --muted: #71717a; --line: #e4e4e7; --card: #fff; --accent: #2563eb; }
           @media (prefers-color-scheme: dark) {

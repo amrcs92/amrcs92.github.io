@@ -1,6 +1,6 @@
-/** Deployed at the root of https://amrcs92.github.io (repo amrcs92/amrcs92.github.io), so there is no base path. */
+/** Deployed at the root of https://amrashraf.dev (repo amrcs92/amrcs92.github.io), so there is no base path. */
 export const basePath = "";
-export const siteUrl = "https://amrcs92.github.io";
+export const siteUrl = "https://amrashraf.dev";
 
 /** Prefix a file in /public with the base path (plain <img>/<a> don't add it on their own). */
 export const asset = (path: string) => `${basePath}${path}`;
@@ -22,11 +22,11 @@ export type ProjectId = "dawa2" | "fakkerni" | "claude-usage-tray";
 export const projectLinks: Record<ProjectId, { apk: string; kind?: "exe"; code?: boolean; view?: { en: string; ar: string } }> = {
   dawa2: {
     apk: apk("dawa2-site", "dawa2.apk"),
-    view: { en: "https://amrcs92.github.io/dawa2-site/", ar: "https://amrcs92.github.io/dawa2-site/ar/" },
+    view: { en: `${siteUrl}/dawa2-site/`, ar: `${siteUrl}/dawa2-site/ar/` },
   },
   fakkerni: {
     apk: apk("fakkerni-site", "fakkerni.apk"),
-    view: { en: "https://amrcs92.github.io/fakkerni-site/", ar: "https://amrcs92.github.io/fakkerni-site/ar/" },
+    view: { en: `${siteUrl}/fakkerni-site/`, ar: `${siteUrl}/fakkerni-site/ar/` },
   },
   "claude-usage-tray": {
     apk: "https://github.com/amrcs92/claude-usage-tray/releases/latest/download/ClaudeUsageTray.exe",

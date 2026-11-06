@@ -1,5 +1,5 @@
 import { routing } from "@/i18n/routing";
-import { basePath, links, siteUrl } from "@/site.config";
+import { basePath, links, projectLinks, siteUrl } from "@/site.config";
 
 // Written by hand instead of `sitemap.ts`, which can't add the <?xml-stylesheet?> line
 // that makes browsers render the sitemap as a table (public/sitemap.xsl).
@@ -21,6 +21,15 @@ export function GET() {
       priority: locale === routing.defaultLocale ? 1 : 0.9,
       alternates: languages,
     })),
+    // The project sites live under this domain too; projects with `code` set link to a repo instead.
+    ...Object.values(projectLinks).flatMap(({ view, code }) => {
+      if (!view || code) return [];
+      const alternates = { en: view.en, ar: view.ar, "x-default": view.en };
+      return [
+        { loc: view.en, changefreq: "monthly", priority: 0.8, alternates },
+        { loc: view.ar, changefreq: "monthly", priority: 0.7, alternates },
+      ];
+    }),
     { loc: `${siteUrl}${links.cv}`, changefreq: "yearly", priority: 0.5 },
   ];
   const lastmod = new Date().toISOString();
