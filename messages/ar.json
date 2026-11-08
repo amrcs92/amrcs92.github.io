@@ -298,7 +298,8 @@
               "t": "النشاط حسب المستخدم"
             }
           ]
-        }
+        },
+        "slug": "monglish"
       },
       {
         "org": "US Legalization",
@@ -308,27 +309,31 @@
         "y": "2019",
         "points": [
           "تطبيقات Laravel وWordPress مع مدفوعات FirstData وStripe وواجهات الشحن من FedEx."
-        ]
+        ],
+        "slug": "us-legalization"
       },
       {
         "org": "IT Wolf Solutions",
         "role": "مطوّر برمجيات مبتدئ",
-        "from": "2017",
-        "to": "2018",
+        "from": "يونيو 2017",
+        "to": "فبراير 2018",
         "y": "2017",
         "points": [
           "تطبيق صيدلية Saydality وتطبيق Taxi Masr باستخدام Ionic."
-        ]
+        ],
+        "slug": "it-wolf"
       },
       {
         "org": "مدرسة KAUMEYA للغات",
         "role": "مطوّر ويب / محلّل بيانات",
-        "from": "2015",
-        "to": "2016",
+        "from": "نوفمبر 2015",
+        "to": "نوفمبر 2016",
         "y": "2015",
-        "points": []
+        "points": [],
+        "slug": "kaumeya"
       }
-    ]
+    ],
+    "jobs": "الوظائف"
   },
   "skills": {
     "kicker": "الأدوات",

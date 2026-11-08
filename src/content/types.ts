@@ -15,7 +15,7 @@ export type Content = {
   work: { kicker: string; title: string; intro: string; crew: { cmd: string; rows: [string, string][] } };
   projects: { id: ProjectId; name: string; alt: string; color: string; tagline: string; desc: string; status: string; how: string; shots: [string, string]; tags: string[] }[];
   ai: { kicker: string; title: string; lead: string; steps: { t: string; d: string; tool: string }[]; noteTitle: string; note: string };
-  exp: { kicker: string; title: string; items: { org: string; role: string; from: string; to: string; y: string; points: string[]; gallery?: Gallery }[] };
+  exp: { kicker: string; title: string; jobs: string; items: { slug?: string; org: string; role: string; from: string; to: string; y: string; points: string[]; gallery?: Gallery }[] };
   skills: { kicker: string; title: string; groups: string[]; items: string[][] };
   edu: { kicker: string; title: string; items: { degree: string; school: string; year: string }[] };
   contact: { kicker: string; title: string; line: string; cta: string };

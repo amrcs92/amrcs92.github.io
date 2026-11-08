@@ -156,14 +156,6 @@ html[lang="ar"] .cn-name { letter-spacing: 0; line-height: 1.3; font-weight: 700
 .cn-note { margin-top: var(--space-6); padding: 16px 18px; font-family: var(--font-cn-mono); font-size: 13.5px; line-height: 1.7; }
 .cn-note b { color: var(--cn-accent); font-weight: 500; }
 
-.cn-log { list-style: none; margin: 0; padding: 0; position: relative; }
-.cn-log::before { content: ""; position: absolute; inset-block: 10px 10px; inset-inline-start: 5px; width: 2px; background: var(--cn-line); }
-.cn-log > li { position: relative; padding-inline-start: 32px; padding-bottom: var(--space-8); }
-.cn-log > li::before { content: ""; position: absolute; inset-inline-start: 0; top: 7px; width: 12px; height: 12px; border-radius: 50%; background: var(--cn-bg); border: 2px solid var(--cn-muted); }
-.cn-log > li:first-child::before { border-color: var(--cn-ok); background: var(--cn-ok); }
-.cn-commit { font-family: var(--font-cn-mono); font-size: 13px; color: var(--cn-muted); display: flex; flex-wrap: wrap; gap: 4px 12px; }
-.cn-head { color: var(--cn-ok); }
-.cn-log h3 { margin: 4px 0 0; font-size: 20px; font-weight: 600; }
 .cn-org { margin: 0; color: var(--cn-accent); font-weight: 500; }
 .cn-diff { list-style: none; margin: 10px 0 0; padding: 0; font-size: 15px; display: grid; gap: 4px; }
 .cn-diff li { padding-inline-start: 20px; position: relative; }
@@ -204,20 +196,52 @@ html[lang="ar"] .cn-name { letter-spacing: 0; line-height: 1.3; font-weight: 700
   .cn-name { font-size: 76px; }
   html[lang="ar"] .cn-name { font-size: 64px; }
   .cn-sec { padding-block: var(--space-24); }
-  .cn-log { display: grid; }
-  .cn-log > li { display: grid; grid-template-columns: 200px 1fr; column-gap: 32px; }
-  .cn-log > li > :not(.cn-commit) { grid-column: 2; }
-  .cn-log > li > .cn-commit { grid-row: 1 / span 4; flex-direction: column; padding-top: 6px; }
   .cn-skills { grid-template-columns: repeat(4, 1fr); }
   .cn-cmd { font-size: 30px; padding: 28px; }
 }
 }
 
 /* Work screenshot gallery (under an experience entry) and its lightbox */
+/* Experience: `git branch` switcher. Solid panels so the text never sits on the particle field. */
+.cn-xp { display: grid; gap: var(--space-4); align-items: start; }
+.cn-xp:not([data-ready]) .cn-xp-nav { display: none; }
+.cn-xp-nav { padding: 8px; display: flex; flex-direction: column; gap: 4px; }
+.cn-xp-cmd { margin: 4px 8px 6px; font-family: var(--font-cn-mono); font-size: 13px; color: var(--cn-ink); }
+.cn-xp-tabs { display: flex; flex-direction: column; gap: 4px; }
+.cn-xp-tab { all: unset; box-sizing: border-box; display: flex; gap: 8px; align-items: flex-start; width: 100%; min-height: 44px; padding: 10px; border-radius: var(--radius-sm); border: 1px solid transparent; cursor: pointer; color: var(--cn-ink); text-align: start; }
+.cn-xp-tab:hover { border-color: var(--cn-line); }
+.cn-xp-tab[aria-selected="true"] { background: color-mix(in srgb, var(--cn-accent) 10%, var(--cn-surface)); border-color: var(--cn-accent); }
+.cn-xp-tab:focus-visible { outline: 2px solid var(--cn-accent); outline-offset: 2px; }
+.cn-xp-star { flex: none; width: 14px; font-family: var(--font-cn-mono); font-weight: 700; color: var(--cn-accent); }
+.cn-xp-t { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.cn-xp-t b { font-weight: 600; font-size: 15px; line-height: 1.35; }
+.cn-xp-org { font-size: 14px; font-weight: 500; color: var(--cn-accent); }
+.cn-xp-date { font-family: var(--font-cn-mono); font-size: 13px; color: var(--cn-muted); }
+.cn-xp-panels { display: grid; gap: var(--space-4); min-width: 0; }
+.cn-xp-panel { overflow: hidden; min-width: 0; }
+.cn-xp-panel[hidden] { display: none; }
+.cn-xp-panel:focus-visible { outline: 2px solid var(--cn-accent); outline-offset: 2px; }
+.cn-xp-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; padding: 10px 16px; border-bottom: 1px solid var(--cn-line); font-family: var(--font-cn-mono); font-size: 13.5px; }
+.cn-xp-head { color: var(--cn-ok); border: 1px solid var(--cn-ok); border-radius: var(--radius-sm); padding: 2px 8px; font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+.cn-xp-body { padding: 16px; }
+.cn-xp-when { margin: 0 0 6px; font-family: var(--font-cn-mono); font-size: 14px; color: var(--cn-muted); }
+.cn-xp-body h3 { margin: 0; font-size: 22px; line-height: 1.25; font-weight: 600; }
+.cn-xp-gal { border-top: 1px dashed var(--cn-line); padding: 16px; background: var(--cn-bg); }
+.cn-xp-gal .cn-gal { margin-top: 0; }
+@media (min-width: 760px) {
+  .cn-xp-bar { padding: 10px 22px; }
+  .cn-xp-body, .cn-xp-gal { padding: 22px; }
+  .cn-xp-body h3 { font-size: 28px; letter-spacing: -.01em; }
+  html[lang="ar"] .cn-xp-body h3 { letter-spacing: 0; }
+}
+@media (min-width: 1040px) {
+  .cn-xp[data-ready] { grid-template-columns: 320px minmax(0, 1fr); gap: var(--space-6); }
+}
+
 .cn-gal { margin-top: var(--space-6); }
 .cn-gal-h p { margin: 0; font-size: 13px; }
 .cn-gal-h h4 { margin: 2px 0 6px; font-size: 18px; font-weight: 600; }
-.cn-gal-d { max-width: 72ch; color: var(--cn-muted); font-size: 15px; }
+.cn-gal-d { max-width: 72ch; color: var(--cn-ink); font-size: 15px; }
 .cn-gal-grid { list-style: none; margin: var(--space-4) 0 0; padding: 0; display: grid; gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (min-width: 640px) { .cn-gal-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (min-width: 1024px) { .cn-gal-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
@@ -227,7 +251,7 @@ html[lang="ar"] .cn-name { letter-spacing: 0; line-height: 1.3; font-weight: 700
 .cn-gal-grid img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-bottom: 1px solid var(--cn-line); }
 .cn-gal-grid span { display: block; padding: 6px 10px 8px; font-size: 13px; line-height: 1.35; }
 @media (prefers-reduced-motion: no-preference) { .cn-gal-grid img { transition: transform .25s; } .cn-gal-grid button:hover img { transform: scale(1.03); } }
-.cn-gal-note { margin: 10px 0 0; font-size: 12px; }
+.cn-gal-note { margin: 10px 0 0; font-size: 13px; }
 .cn-lb { margin: auto; width: min(1200px, 94vw); max-height: 94vh; padding: 0; border: 1px solid var(--cn-line); border-radius: var(--radius-md); background: var(--cn-surface); color: var(--cn-ink); font-family: var(--font-cn-sans); }
 .cn-lb::backdrop { background: rgb(0 0 0 / .78); }
 .cn-lb-bar { display: flex; align-items: center; gap: 14px; padding: 10px 12px 10px 16px; border-bottom: 1px solid var(--cn-line); font-size: 14px; }

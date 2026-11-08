@@ -298,7 +298,8 @@
               "t": "Activity by user"
             }
           ]
-        }
+        },
+        "slug": "monglish"
       },
       {
         "org": "US Legalization",
@@ -308,27 +309,31 @@
         "y": "2019",
         "points": [
           "Laravel and WordPress apps with FirstData and Stripe payments and FedEx shipping APIs."
-        ]
+        ],
+        "slug": "us-legalization"
       },
       {
         "org": "IT Wolf Solutions",
         "role": "Junior Software Developer",
-        "from": "2017",
-        "to": "2018",
+        "from": "Jun 2017",
+        "to": "Feb 2018",
         "y": "2017",
         "points": [
           "Saydality pharmacy app and Taxi Masr, built with Ionic."
-        ]
+        ],
+        "slug": "it-wolf"
       },
       {
         "org": "KAUMEYA Language School",
         "role": "Web Developer / Data Analyst",
-        "from": "2015",
-        "to": "2016",
+        "from": "Nov 2015",
+        "to": "Nov 2016",
         "y": "2015",
-        "points": []
+        "points": [],
+        "slug": "kaumeya"
       }
-    ]
+    ],
+    "jobs": "Jobs"
   },
   "skills": {
     "kicker": "Toolkit",

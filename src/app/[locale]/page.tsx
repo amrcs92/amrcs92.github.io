@@ -5,7 +5,7 @@ import { routing } from "@/i18n/routing";
 import type { Content } from "@/content/types";
 import { NanoField } from "@/components/NanoField";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { WorkGallery } from "@/components/WorkGallery";
+import { ExperienceSwitcher } from "@/components/ExperienceSwitcher";
 import { HeroType } from "@/components/HeroType";
 import { ArrowIcon, CodeIcon, DownloadIcon, ExternalIcon, MailIcon, PersonIcon } from "@/components/icons";
 import { asset, links, projectLinks, shotNames, shotSize, type ProjectId } from "@/site.config";
@@ -148,22 +148,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
           <section className="cn-sec" id="exp">
             <SectionHead slug="experience" sub={c.exp.title} />
-            <ol className="cn-log">
-              {c.exp.items.map((j, i) => (
-                <li key={j.org}>
-                  <div className="cn-commit">
-                    {i === 0 && <span className="cn-head">HEAD →</span>}
-                    <span>{j.from} – {j.to}</span>
-                  </div>
-                  <h3>{j.role}</h3>
-                  <p className="cn-org">{j.org}</p>
-                  {j.points.length > 0 && (
-                    <ul className="cn-diff">{j.points.map((p) => <li key={p}>{p}</li>)}</ul>
-                  )}
-                  {j.gallery && <WorkGallery g={j.gallery} dir="monglish-edulixa360" />}
-                </li>
-              ))}
-            </ol>
+            <ExperienceSwitcher items={c.exp.items} label={c.exp.jobs} />
           </section>
 
           <section className="cn-sec" id="skills">
