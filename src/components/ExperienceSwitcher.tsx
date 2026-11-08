@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useSyncExternalStore, type KeyboardEvent } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore, type KeyboardEvent } from "react";
 import type { Content } from "@/content/types";
 import { WorkGallery } from "@/components/WorkGallery";
 
@@ -23,6 +23,13 @@ export function ExperienceSwitcher({ items, label }: { items: Job[]; label: stri
   const fromHash = useSyncExternalStore(onHash, () => ids.indexOf(decodeURIComponent(location.hash.slice(1))), () => -1);
   const [picked, setPicked] = useState(0);
   const sel = fromHash >= 0 ? fromHash : picked;
+
+  // Hiding the other jobs on load shortens the page, which throws off the browser's own jump to
+  // #exp-…; scroll the linked job into view once it is the only one showing.
+  useEffect(() => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (id.startsWith("exp-")) requestAnimationFrame(() => document.getElementById(id)?.scrollIntoView({ block: "start" }));
+  }, []);
 
   function pick(k: number, focus = false) {
     history.replaceState(null, "", `#${ids[k]}`); // no scroll, no hashchange event
