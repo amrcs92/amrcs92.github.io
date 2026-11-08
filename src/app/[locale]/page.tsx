@@ -6,6 +6,7 @@ import type { Content } from "@/content/types";
 import { NanoField } from "@/components/NanoField";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { ExperienceSwitcher } from "@/components/ExperienceSwitcher";
+import { AiPipeline } from "@/components/AiPipeline";
 import { HeroType } from "@/components/HeroType";
 import { ArrowIcon, CodeIcon, DownloadIcon, ExternalIcon, MailIcon, PersonIcon } from "@/components/icons";
 import { asset, links, projectLinks, shotNames, shotSize, type ProjectId } from "@/site.config";
@@ -133,16 +134,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
           <section className="cn-sec" id="ai">
             <SectionHead slug="ai-workflow" sub={c.ai.title} />
             <p className="cn-intro" style={{ color: "var(--cn-ink)", fontSize: 19 }}>{c.ai.lead}</p>
-            <ol className="cn-pipe">
-              {c.ai.steps.map((s, i) => (
-                <li key={s.t} className="panel">
-                  <span className="n">step {i + 1}/5</span>
-                  <h3>{s.t}</h3>
-                  <p>{s.d}</p>
-                  <span className="tool">$ {s.tool}</span>
-                </li>
-              ))}
-            </ol>
+            <AiPipeline ai={c.ai} />
             <p className="panel cn-note"><b>{c.ai.noteTitle}:</b> {c.ai.note}</p>
           </section>
 

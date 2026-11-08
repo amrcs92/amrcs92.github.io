@@ -14,7 +14,7 @@ export type Content = {
   hero: Record<"first" | "last" | "name" | "short" | "mono" | "title" | "location" | "years" | "line" | "cv" | "github" | "contact" | "stack" | "langs" | "status", string>;
   work: { kicker: string; title: string; intro: string; crew: { cmd: string; rows: [string, string][] } };
   projects: { id: ProjectId; name: string; alt: string; color: string; tagline: string; desc: string; status: string; how: string; shots: [string, string]; tags: string[] }[];
-  ai: { kicker: string; title: string; lead: string; steps: { t: string; d: string; tool: string }[]; noteTitle: string; note: string };
+  ai: { kicker: string; title: string; lead: string; steps: { t: string; d: string; tool: string }[]; noteTitle: string; note: string; step: string; done: string; running: string; shipped: string };
   exp: { kicker: string; title: string; jobs: string; items: { slug?: string; org: string; role: string; from: string; to: string; y: string; points: string[]; gallery?: Gallery }[] };
   skills: { kicker: string; title: string; groups: string[]; items: string[][] };
   edu: { kicker: string; title: string; items: { degree: string; school: string; year: string }[] };

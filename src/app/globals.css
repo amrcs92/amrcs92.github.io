@@ -147,12 +147,25 @@ html[lang="ar"] .cn-name { letter-spacing: 0; line-height: 1.3; font-weight: 700
 .cn-comment b { color: var(--cn-ink); font-weight: 500; }
 
 .cn-pipe { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-.cn-pipe li { position: relative; padding: 16px; }
-.cn-pipe .n { font-family: var(--font-cn-mono); font-size: 12px; color: var(--cn-muted); }
+.cn-pipe li { position: relative; padding: 16px; transition: border-color .6s ease; }
+.cn-pipe .n { font-family: var(--font-cn-mono); font-size: 12px; color: var(--cn-muted); transition: color .3s ease; }
 .cn-pipe h3 { margin: 4px 0 4px; font-size: 17px; font-weight: 600; }
 .cn-pipe p { margin: 0 0 10px; color: var(--cn-muted); font-size: 14.5px; line-height: 1.5; }
 .cn-pipe .tool { font-family: var(--font-cn-mono); font-size: 12px; color: var(--cn-accent); }
+/* Pipeline run: the static HTML is the finished run (step 5 amber); [data-anim] plays it once in view */
 .cn-pipe li:last-child { border-color: var(--cn-accent); }
+.cn-run { position: relative; }
+.cn-run-line { position: absolute; top: -10px; inset-inline: 0; height: 3px; border-radius: 2px; background: var(--cn-line); overflow: hidden; }
+.cn-run-line i { display: block; height: 100%; width: 100%; background: var(--cn-ok); }
+.cn-run[data-anim]:not([data-done]) .cn-run-line i { background: var(--cn-accent); }
+.cn-run[data-anim] .cn-pipe li:last-child { border-color: var(--cn-line); }
+.cn-run[data-anim] .cn-pipe li[data-state="active"] { border-color: var(--cn-accent); z-index: 1; }
+.cn-pipe li[data-state="done"] .n { color: var(--cn-ok); }
+.cn-pipe li[data-state="active"] .n { color: var(--cn-accent); }
+.cn-caret { font-weight: 400; margin-inline-start: 2px; }
+@media (prefers-reduced-motion: no-preference) { .cn-caret { animation: cn-blink 1s steps(1) infinite; } }
+@keyframes cn-blink { 50% { opacity: 0; } }
+.cn-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .cn-note { margin-top: var(--space-6); padding: 16px 18px; font-family: var(--font-cn-mono); font-size: 13.5px; line-height: 1.7; }
 .cn-note b { color: var(--cn-accent); font-weight: 500; }
 
@@ -184,9 +197,11 @@ html[lang="ar"] .cn-name { letter-spacing: 0; line-height: 1.3; font-weight: 700
   .cn-info { padding: 28px 28px; align-self: center; }
   .cn-pipe { grid-template-columns: repeat(5, 1fr); gap: 0; }
   .cn-pipe li { border-radius: 0; }
-  .cn-pipe li + li { border-inline-start: 0; }
+  .cn-pipe li + li { margin-inline-start: -1px; }
   .cn-pipe li:not(:last-child)::after { content: "→"; position: absolute; inset-inline-end: -9px; top: 16px; z-index: 1; background: var(--cn-bg); color: var(--cn-accent); font-family: var(--font-cn-mono); font-size: 14px; line-height: 1; padding: 2px 0; }
   html[dir="rtl"] .cn-pipe li:not(:last-child)::after { content: "←"; }
+  .cn-pipe li::after { z-index: 2; transition: color .4s ease; }
+  .cn-run[data-anim] .cn-pipe li:not([data-passed])::after { color: var(--cn-line); }
   .cn-skills, .cn-edu { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 1040px) {

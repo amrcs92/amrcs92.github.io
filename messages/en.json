@@ -170,7 +170,11 @@
       }
     ],
     "noteTitle": "Straight answer",
-    "note": "Dawa2 and Fakkerni were built this way. I didn’t hand-write their React Native or Kotlin — my hands-on stack is Laravel and Next.js."
+    "note": "Dawa2 and Fakkerni were built this way. I didn’t hand-write their React Native or Kotlin — my hands-on stack is Laravel and Next.js.",
+    "step": "step",
+    "done": "✓ done",
+    "running": "● running",
+    "shipped": "● shipped"
   },
   "exp": {
     "kicker": "Career",
