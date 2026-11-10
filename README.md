@@ -22,7 +22,19 @@ I'm bilingual, and I build bilingual: Arabic and English, right-to-left done pro
 
 ## Featured work
 
-Two Android apps I designed, directed and shipped end to end.
+A web store in my own stack, and two Android apps I designed, directed and shipped end to end.
+
+### Cartopia · كارتوبيا — *An online store where the money always adds up.*
+
+An online store with a wallet, card and PayPal checkout, and an admin back office, rebuilt from my 2018 PHP project in Laravel 13 and Vue. Shoppers filter six aisles, review what they bought, and pay from the wallet, by card, with PayPal, or split one order between wallet and card. Prices are worked out on the server, money is stored in whole cents, and every balance change runs in a locked transaction with a ledger row. 900+ automated tests, with CI on every push.
+
+<p>
+  <img src="public/screenshots/cartopia-en-light-shop.webp" width="400" alt="Cartopia — the shop, with aisle and price filters">
+  <img src="public/screenshots/cartopia-en-light-checkout.webp" width="400" alt="Cartopia — checkout with wallet, card and PayPal">
+</p>
+
+**Built with:** Laravel 13 · Vue 3 · Inertia · Tailwind · Filament · Stripe · PayPal · Pest  
+[Watch the 90-second tour](https://youtu.be/kiOWb290oNQ) · [Source on GitHub](https://github.com/amrcs92/cartopia)
 
 > **Built with AI, said plainly.** I'm a web developer. These apps were built through an AI-directed workflow, not by hand-writing React Native or Kotlin. I wrote the specs, chose the designs, directed the implementation, tested on real phones, and decided what shipped. My hands-on stack is Laravel and Next.js.
 

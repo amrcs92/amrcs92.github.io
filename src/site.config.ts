@@ -16,10 +16,16 @@ export const links = {
 /** Each app has its own public site; its latest release carries the APK (the app repos themselves are private). */
 const apk = (repo: string, file: string) => `https://github.com/amrcs92/${repo}/releases/latest/download/${file}`;
 
-export type ProjectId = "dawa2" | "fakkerni" | "claude-usage-tray";
+export type ProjectId = "cartopia" | "dawa2" | "fakkerni" | "claude-usage-tray";
 
-/** `apk` is the download (an .exe when `kind` is "exe"); `view` is the project site, or the source repo when `code` is set. */
-export const projectLinks: Record<ProjectId, { apk: string; kind?: "exe"; code?: boolean; view?: { en: string; ar: string } }> = {
+/** `apk` is the main button: a download (an .exe when `kind` is "exe") or a video tour when `kind` is "video"; `view` is the project site, or the source repo when `code` is set. */
+export const projectLinks: Record<ProjectId, { apk: string; kind?: "exe" | "video"; code?: boolean; view?: { en: string; ar: string } }> = {
+  cartopia: {
+    apk: "https://youtu.be/kiOWb290oNQ",
+    kind: "video",
+    code: true,
+    view: { en: "https://github.com/amrcs92/cartopia", ar: "https://github.com/amrcs92/cartopia" },
+  },
   dawa2: {
     apk: apk("dawa2-site", "dawa2.apk"),
     view: { en: `${siteUrl}/dawa2-site/`, ar: `${siteUrl}/dawa2-site/ar/` },
@@ -36,5 +42,8 @@ export const projectLinks: Record<ProjectId, { apk: string; kind?: "exe"; code?:
   },
 };
 
-export const shotSize: Record<ProjectId, [number, number]> = { dawa2: [540, 1125], fakkerni: [540, 1200], "claude-usage-tray": [364, 541] };
-export const shotNames: Record<ProjectId, [string, string]> = { dawa2: ["today", "alarm"], fakkerni: ["home", "medication"], "claude-usage-tray": ["dashboard", "dashboard-high"] };
+export const shotSize: Record<ProjectId, [number, number]> = { cartopia: [1200, 750], dawa2: [540, 1125], fakkerni: [540, 1200], "claude-usage-tray": [364, 541] };
+export const shotNames: Record<ProjectId, [string, string]> = { cartopia: ["shop", "checkout"], dawa2: ["today", "alarm"], fakkerni: ["home", "medication"], "claude-usage-tray": ["dashboard", "dashboard-high"] };
+
+/** Web projects: landscape .webp screens of an English-only UI, stacked instead of side by side. */
+export const wideShots: Partial<Record<ProjectId, true>> = { cartopia: true };

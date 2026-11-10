@@ -8,15 +8,16 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import { ExperienceSwitcher } from "@/components/ExperienceSwitcher";
 import { AiPipeline } from "@/components/AiPipeline";
 import { HeroType } from "@/components/HeroType";
-import { ArrowIcon, CodeIcon, DownloadIcon, ExternalIcon, MailIcon, PersonIcon } from "@/components/icons";
-import { asset, links, projectLinks, shotNames, shotSize, type ProjectId } from "@/site.config";
+import { ArrowIcon, CodeIcon, DownloadIcon, ExternalIcon, MailIcon, PersonIcon, PlayIcon } from "@/components/icons";
+import { asset, links, projectLinks, shotNames, shotSize, wideShots, type ProjectId } from "@/site.config";
 
 /** Both theme variants render; CSS shows the one matching the active theme. Screens always match the page language. */
 function Shot({ id, i, lang, label, name }: { id: ProjectId; i: 0 | 1; lang: string; label: string; name: string }) {
   const [w, h] = shotSize[id];
+  const [shotLang, ext] = wideShots[id] ? ["en", "webp"] : [lang, "png"];
   return (["light", "dark"] as const).map((theme) => (
-    // eslint-disable-next-line @next/next/no-img-element -- static export, pre-sized PNGs
-    <img key={theme} className={`shot-${theme}`} src={asset(`/screenshots/${id}-${lang}-${theme}-${shotNames[id][i]}.png`)}
+    // eslint-disable-next-line @next/next/no-img-element -- static export, pre-sized images
+    <img key={theme} className={`shot-${theme}`} src={asset(`/screenshots/${id}-${shotLang}-${theme}-${shotNames[id][i]}.${ext}`)}
       width={w} height={h} alt={`${name} — ${label}`} loading="lazy" decoding="async" />
   ));
 }
@@ -106,7 +107,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                     <span className="st"><span className="cn-dot" />{p.status}</span>
                   </div>
                   <div className="cn-repo-b">
-                    <div className="cn-shots">
+                    <div className={wideShots[p.id] ? "cn-shots wide" : "cn-shots"}>
                       <Shot id={p.id} i={0} lang={locale} label={p.shots[0]} name={p.name} />
                       <Shot id={p.id} i={1} lang={locale} label={p.shots[1]} name={p.name} />
                     </div>
@@ -119,7 +120,11 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                       </ul>
                       <p className="cn-comment">{"// "}<b>{c.ui.how}:</b> {p.how}</p>
                       <div className="cn-ctas">
-                        <a className="cn-btn pri" href={pl.apk}><DownloadIcon />{pl.kind === "exe" ? c.ui.exe : c.ui.apk}</a>
+                        {pl.kind === "video" ? (
+                          <a className="cn-btn pri" href={pl.apk} target="_blank" rel="noopener noreferrer"><PlayIcon />{c.ui.video}</a>
+                        ) : (
+                          <a className="cn-btn pri" href={pl.apk}><DownloadIcon />{pl.kind === "exe" ? c.ui.exe : c.ui.apk}</a>
+                        )}
                         {pl.view && (
                           <a className="cn-btn" href={pl.view[locale as "en" | "ar"]} target="_blank" rel="noopener noreferrer">{pl.code ? c.ui.code : c.ui.view}{pl.code ? <ExternalIcon /> : <ArrowIcon />}</a>
                         )}

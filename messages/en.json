@@ -30,7 +30,8 @@
     "stack": "Stack",
     "langs": "Languages",
     "exe": "Download for Windows",
-    "code": "View code"
+    "code": "View code",
+    "video": "Watch the tour"
   },
   "hero": {
     "first": "Amr Ashraf",
@@ -51,8 +52,8 @@
   },
   "work": {
     "kicker": "Featured work",
-    "title": "Two Android apps and a Windows tool, shipped end to end.",
-    "intro": "I designed, directed and shipped all three. I’m a web developer, so I built them through an AI-directed workflow — not hand-coded React Native or Python — and I say so up front.",
+    "title": "A web store, two Android apps and a Windows tool, shipped end to end.",
+    "intro": "I designed, directed and shipped all four. Cartopia is in my own stack, Laravel and Vue. The apps are outside it, so I built them through an AI-directed workflow — not hand-coded React Native or Python — and I say so up front.",
     "crew": {
       "cmd": "git shortlog --team",
       "rows": [
@@ -76,6 +77,29 @@
     }
   },
   "projects": [
+    {
+      "id": "cartopia",
+      "name": "Cartopia",
+      "alt": "كارتوبيا",
+      "color": "#1F5A3D",
+      "tagline": "An online store where the money always adds up.",
+      "desc": "An online store with a wallet, card and PayPal checkout, and an admin back office. Shoppers filter six aisles, review what they bought, and pay from the wallet, by card, with PayPal, or split one order between wallet and card. Rebuilt from my 2018 PHP project in Laravel 13 and Vue.",
+      "status": "Web · source on GitHub",
+      "how": "In my own stack, with the same workflow: a spec and a plan for each milestone, Claude Code for the build, and 900+ tests plus CI checking every change.",
+      "shots": [
+        "Shop with filters",
+        "Checkout with wallet, card and PayPal"
+      ],
+      "tags": [
+        "Laravel",
+        "Vue",
+        "Inertia",
+        "Stripe",
+        "PayPal",
+        "Filament",
+        "Pest"
+      ]
+    },
     {
       "id": "dawa2",
       "name": "Dawa2",

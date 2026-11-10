@@ -2,6 +2,7 @@
 
 /* Console design tokens (from the approved design system). Light is the default; [data-theme] is set before paint. */
 :root, [data-theme="light"] {
+  --brand-cartopia: #1F5A3D;
   --brand-dawa2: #0F766E;
   --brand-fakkerni: #1E1B4B;
   --brand-claude-usage-tray: #334155;
@@ -16,6 +17,7 @@
   color-scheme: light;
 }
 [data-theme="dark"] {
+  --brand-cartopia: #1F5A3D;
   --brand-dawa2: #0F766E;
   --brand-fakkerni: #1E1B4B;
   --brand-claude-usage-tray: #334155;
@@ -136,6 +138,8 @@ html[lang="ar"] .cn-name { letter-spacing: 0; line-height: 1.3; font-weight: 700
 .cn-repo-b { display: grid; }
 .cn-shots { display: flex; justify-content: center; gap: 14px; padding: 24px 16px; border-bottom: 1px solid var(--cn-line); background: color-mix(in srgb, var(--brand) 14%, var(--cn-surface)); }
 .cn-shots img { width: 44%; max-width: 210px; height: auto; border-radius: 14px; border: 1px solid var(--cn-line); }
+.cn-shots.wide { flex-direction: column; align-items: center; justify-content: center; }
+.cn-shots.wide img { width: 100%; max-width: 560px; border-radius: 8px; }
 .cn-info { padding: 20px 16px 22px; }
 .cn-info h3 { font-size: 30px; line-height: 1.1; letter-spacing: -.02em; margin: 0 0 4px; font-weight: 600; }
 .cn-info h3 span { font-weight: 400; color: var(--cn-muted); font-size: .7em; margin-inline-start: 8px; }

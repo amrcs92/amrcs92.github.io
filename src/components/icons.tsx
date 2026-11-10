@@ -13,6 +13,7 @@ export const ArrowIcon = () => <Svg flip><path d="M5 12h14M13 6l6 6-6 6" /></Svg
 export const ExternalIcon = () => <Svg flip><path d="M7 17 17 7M8 7h9v9" /></Svg>;
 export const DownloadIcon = () => <Svg><path d="M12 4v11M7 10l5 5 5-5M5 20h14" /></Svg>;
 export const MailIcon = () => <Svg><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></Svg>;
+export const PlayIcon = () => <Svg><path d="M8 5.5v13l10-6.5z" /></Svg>;
 export const CodeIcon = () => <Svg><path d="m8 8-4 4 4 4M16 8l4 4-4 4" /></Svg>;
 export const PersonIcon = () => <Svg><circle cx="12" cy="8" r="3.5" /><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5" /></Svg>;
 export const SunIcon = () => <Svg><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></Svg>;
